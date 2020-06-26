@@ -40,12 +40,12 @@ func main() {
 	secret := viper.GetString("secret")
 	token := viper.GetString("token")
 
-	// 建立機器人
+	// 設定 linebot 配置
 	bot, err = linebot.New(secret, token)
 	if err != nil {
 		panic(err)
 	} else {
-		fmt.Println("connect line bot success")
+		fmt.Println("config line bot success")
 	}
 
 	httphandler()
